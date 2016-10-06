@@ -1,0 +1,3316 @@
+==> default: Attempting graceful shutdown of VM...
+==> default: Checking if box 'ubuntu/trusty32' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2200 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2200
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Users/Simon/Documents/SSEL/Local VM/redwood-2.2-ubuntu-14.04/2.2
+==> default: Running provisioner: shell...
+    default: Running: C:/Users/Simon/AppData/Local/Temp/vagrant-shell20160925-9524-1r24j0e.sh
+==> default: stdin: is not a tty
+==> default: ===================================================================
+==> default: Updating Package Lists
+==> default: ===================================================================
+==> default: Hit http://security.ubuntu.com trusty-security InRelease
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+==> default: Hit http://archive.ubuntu.com trusty-updates InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty Release.gpg
+==> default: Hit http://security.ubuntu.com trusty-security/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+==> default: Hit http://security.ubuntu.com trusty-security/universe i386 Packages
+==> default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+==> default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty Release
+==> default: Hit http://archive.ubuntu.com trusty/main Sources
+==> default: Hit http://archive.ubuntu.com trusty/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> default: Reading package lists...
+==> default: ===================================================================
+==> default: Installing git
+==> default: ===================================================================
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: git is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: ===================================================================
+==> default: Installing apache2
+==> default: ===================================================================
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: apache2 is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: ===================================================================
+==> default: Changing apache user from www-data to vagrant
+==> default: ===================================================================
+==> default: ===================================================================
+==> default: Setting up shared folder
+==> default: ===================================================================
+==> default: ===================================================================
+==> default: Cloning RedwoodFramework git repository
+==> default: ===================================================================
+==> default: fatal: destination path 'redwood' already exists and is not an empty directory.
+==> default: ===================================================================
+==> default: running Redwood 2 Ubuntu+Apache setup script
+==> default: ===================================================================
+==> default: /tmp/vagrant-shell: line 44: no: command not found
+==> default: Traceback (most recent call last):
+==> default:   File "/usr/bin/pip", line 9, in <module>
+==> default:     
+==> default: load_entry_point('pip==1.5.4', 'console_scripts', 'pip')()
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/__init__.py", line 235, in main
+==> default:     
+==> default: return command.main(cmd_args)
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/basecommand.py", line 156, in main
+==> default:     
+==> default: logger.fatal('Exception:\n%s' % format_exc())
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/log.py", line 111, in fatal
+==> default:     
+==> default: self.log(self.FATAL, msg, *args, **kw)
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/log.py", line 164, in log
+==> default:     
+==> default: consumer.flush()
+==> default: IOError
+==> default: : 
+==> default: [Errno 32] Broken pipe
+==> default: Traceback (most recent call last):
+==> default:   File "/usr/bin/pip", line 9, in <module>
+==> default:     
+==> default: load_entry_point('pip==1.5.4', 'console_scripts', 'pip')()
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/__init__.py", line 235, in main
+==> default:     
+==> default: return command.main(cmd_args)
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/basecommand.py", line 156, in main
+==> default:     
+==> default: logger.fatal('Exception:\n%s' % format_exc())
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/log.py", line 111, in fatal
+==> default:     
+==> default: self.log(self.FATAL, msg, *args, **kw)
+==> default:   File "/usr/lib/python2.7/dist-packages/pip/log.py", line 164, in log
+==> default:     
+==> default: consumer.flush()
+==> default: IOError
+==> default: : 
+==> default: [Errno 32] Broken pipe
+==> default: mkdir: 
+==> default: cannot create directory ‘apache’
+==> default: : File exists
+==> default: System check identified some issues:
+==> default: 
+==> default: WARNINGS:
+==> default: ?: (1_6.W001) Some project unittests may not execute as expected.
+==> default: 	HINT: Django 1.6 introduced a new default test runner. It looks like this project was generated using Django 1.5 or earlier. You should ensure your tests are all running & behaving as expected. See https://docs.djangoproject.com/en/dev/releases/1.6/#new-test-runner for more information.
+==> default: System check identified some issues:
+==> default: 
+==> default: WARNINGS:
+==> default: ?: (1_6.W001) Some project unittests may not execute as expected.
+==> default: 	HINT: Django 1.6 introduced a new default test runner. It looks like this project was generated using Django 1.5 or earlier. You should ensure your tests are all running & behaving as expected. See https://docs.djangoproject.com/en/dev/releases/1.6/#new-test-runner for more information.
+==> default: Traceback (most recent call last):
+==> default:   File "manage.py", line 9, in <module>
+==> default:     
+==> default: execute_from_command_line(sys.argv)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+==> default:     
+==> default: utility.execute()
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 377, in execute
+==> default:     
+==> default: self.fetch_command(subcommand).run_from_argv(self.argv)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 288, in run_from_argv
+==> default:     
+==> default: self.execute(*args, **options.__dict__)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 338, in execute
+==> default:     
+==> default: output = self.handle(*args, **options)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 533, in handle
+==> default:     
+==> default: return self.handle_noargs(**options)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/syncdb.py", line 43, in handle_noargs
+==> default:     
+==> default: confirm = input('Please enter either "yes" or "no": ')
+==> default: IOError
+==> default: : 
+==> default: [Errno 32] Broken pipe
+==> default: CommandError: Collecting static files cancelled.
+==> default: close failed in file object destructor:
+==> default: sys.excepthook is missing
+==> default: lost sys.stderr
+==> default: ln: 
+==> default: failed to create symbolic link ‘./redwood.conf’
+==> default: : File exists
+==> default: rm: 
+==> default: cannot remove ‘000-default.conf’
+==> default: : No such file or directory
+==> default: /tmp/vagrant-shell: line 48: no: command not found
+==> default: Python 2.7.6 (default, Jun 22 2015, 18:00:18) 
+==> default: [GCC 4.8.2] on linux2
+==> default: Type "help", "copyright", "credits" or "license" for more information.
+==> default: (InteractiveConsole)
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "<console>", line 1, in <module>
+==> default: NameError: name 'y' is not defined
+==> default: Traceback (most recent call last):
+==> default:   File "manage.py", line 9, in <module>
+==> default:     
+==> default: execute_from_command_line(sys.argv)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 385, in execute_from_command_line
+==> default:     
+==> default: utility.execute()
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 377, in execute
+==> default:     
+==> default: self.fetch_command(subcommand).run_from_argv(self.argv)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 288, in run_from_argv
+==> default:     
+==> default: self.execute(*args, **options.__dict__)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 338, in execute
+==> default:     
+==> default: output = self.handle(*args, **options)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 533, in handle
+==> default:     
+==> default: return self.handle_noargs(**options)
+==> default:   File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/shell.py", line 109, in handle_noargs
+==> default:     
+==> default: code.interact(local=imported_objects)
+==> default:   File "/usr/lib/python2.7/code.py", line 306, in interact
+==> default:     
+==> default: console.interact(banner)
+==> default:   File "/usr/lib/python2.7/code.py", line 234, in interact
+==> default:     
+==> default: line = self.raw_input(prompt)
+==> default:   File "/usr/lib/python2.7/code.py", line 281, in raw_input
+==> default:     return raw_input(prompt)
+==> default: IOError: [Errno 32] Broken pipe
+==> default: ===================================================================
+==> default: Redwood 2 VM Setup complete!
+==> default: ===================================================================
+==> default: The Django administration credentials are user: 'admin', pass: 'admin'

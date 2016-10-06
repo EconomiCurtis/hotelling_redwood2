@@ -1,0 +1,233 @@
+==> default: Attempting graceful shutdown of VM...
+==> default: Checking if box 'ubuntu/trusty32' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+    default: Adapter 2: hostonly
+==> default: Forwarding ports...
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Configuring and enabling network interfaces...
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Users/Simon/Documents/SSEL/Local VM/redwood-2.2-ubuntu-14.04/2.2
+==> default: Running provisioner: shell...
+    default: Running: C:/Users/Simon/AppData/Local/Temp/vagrant-shell20160925-9904-1ksaplf.sh
+==> default: stdin: is not a tty
+==> default: ===================================================================
+==> default: Updating Package Lists
+==> default: ===================================================================
+==> default: Hit http://security.ubuntu.com trusty-security InRelease
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+==> default: Hit http://archive.ubuntu.com trusty-updates InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty Release.gpg
+==> default: Hit http://security.ubuntu.com trusty-security/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+==> default: Hit http://security.ubuntu.com trusty-security/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+==> default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+==> default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty Release
+==> default: Hit http://archive.ubuntu.com trusty/main Sources
+==> default: Hit http://archive.ubuntu.com trusty/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> default: Reading package lists...
+==> default: ===================================================================
+==> default: Installing git
+==> default: ===================================================================
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: git is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: ===================================================================
+==> default: Installing apache2
+==> default: ===================================================================
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: apache2 is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: ===================================================================
+==> default: Changing apache user from www-data to vagrant
+==> default: ===================================================================
+==> default: ===================================================================
+==> default: Setting up shared folder
+==> default: ===================================================================
+==> default: ===================================================================
+==> default: Cloning RedwoodFramework git repository
+==> default: ===================================================================
+==> default: fatal: destination path 'redwood' already exists and is not an empty directory.
+==> default: ===================================================================
+==> default: running Redwood 2 Ubuntu+Apache setup script
+==> default: ===================================================================
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+==> default: Hit http://security.ubuntu.com trusty-security InRelease
+==> default: Hit http://archive.ubuntu.com trusty-updates InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty Release.gpg
+==> default: Hit http://security.ubuntu.com trusty-security/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+==> default: Hit http://security.ubuntu.com trusty-security/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+==> default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+==> default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty Release
+==> default: Hit http://archive.ubuntu.com trusty/main Sources
+==> default: Hit http://archive.ubuntu.com trusty/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty/main i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/restricted i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/universe i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/multiverse i386 Packages
+==> default: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> default: Reading package lists...
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: apache2 is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: golang is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: libapache2-mod-wsgi is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: redis-server is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: python-redis is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: sendmail is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: python-pip is already the newest version.
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+==> default: Requirement already satisfied (use --upgrade to upgrade): django==1.7 in /usr/local/lib/python2.7/dist-packages
+==> default: Cleaning up...
+==> default: Requirement already satisfied (use --upgrade to upgrade): django-reversion==1.8.4 in /usr/local/lib/python2.7/dist-packages
+==> default: Cleaning up...
+==> default: mkdir: 
+==> default: cannot create directory ‘apache’
+==> default: : File exists
+==> default: System check identified some issues:
+==> default: 
+==> default: WARNINGS:
+==> default: ?: (1_6.W001) Some project unittests may not execute as expected.
+==> default: 	HINT: Django 1.6 introduced a new default test runner. It looks like this project was generated using Django 1.5 or earlier. You should ensure your tests are all running & behaving as expected. See https://docs.djangoproject.com/en/dev/releases/1.6/#new-test-runner for more information.
+==> default: System check identified some issues:
+==> default: 
+==> default: WARNINGS:
+==> default: ?: (1_6.W001) Some project unittests may not execute as expected.
+==> default: 	HINT: Django 1.6 introduced a new default test runner. It looks like this project was generated using Django 1.5 or earlier. You should ensure your tests are all running & behaving as expected. See https://docs.djangoproject.com/en/dev/releases/1.6/#new-test-runner for more information.
+==> default: Operations to perform:
+==> default:   Synchronize unmigrated apps: expecon
+==> default:   Apply all migrations: sessions, admin, sites, auth, reversion, contenttypes
+==> default: Synchronizing apps without migrations:
+==> default:   Creating tables...
+==> default:   Installing custom SQL...
+==> default:   Installing indexes...
+==> default: Running migrations:
+==> default:   No migrations to apply.
+==> default: 
+==> default: You have installed Django's auth system, and don't have any superusers defined.
+==> default: Would you like to create one now? (yes/no): Please enter either
