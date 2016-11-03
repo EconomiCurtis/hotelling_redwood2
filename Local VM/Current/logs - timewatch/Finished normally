@@ -1,0 +1,114 @@
+##Finished normally
+input duration 12
+synchronizedStopWatch.js:111 tick < tickTarget true || tickTarget 12 ||duration 12 ||frequency 1
+synchronizedStopWatch.js:113 actually starting!
+synchronizedStopWatch.js:27 executing Tick
+2:1630 period length=12
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_0_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  0  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+*****************************************************************************
+**************** Nothing happened here. What's the difference? **************
+*****************************************************************************
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_1_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  1  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_2_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  2  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_3_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  3  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_4_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  4  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_5_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  5  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_6_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  6  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_7_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  7  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_8_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  8  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_9_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  9  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_10_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  10  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_11_1
+synchronizedStopWatch.js:27 executing Tick
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:38 I shall schedule a tick. because tick is  11  and tickTarget is  12
+synchronizedStopWatch.js:52 scheduling Tick
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+synchronizedStopWatch.js:27 executing Tick
+redwoodSubject.js:50 the arguments are:  4 _timer_1_t_12_1
+synchronizedStopWatch.js:27 executing Tick
+2:1031 new_period --- from line 1014
+2:1036 I probably called new_period from line 1014
+synchronizedStopWatch.js:36 should I schedule a tick or should I complete my shift?
+synchronizedStopWatch.js:41 I shall complete.
+2:1302 new period --- from clock
+synchronizedStopWatch.js:44 that is my decision
+2:1582 recieving update target
+2:1493 cummulative_payoff 0
