@@ -35,6 +35,23 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 ###Problems in Continuous Instant (CI) Treatment
 
 #####Functional errors
+1. Silo does not work. or rather, randomization after each period does not work.
+	- There is no code that randomizes subjects according to the Silos
+1. Flow-payoff plot update is one click off for subject-self. (Subject needs to click again to see the effect of the previous click). check out plotting function. 
+	- can be solved with predictable user behaviour (double clicks instead of single clicks)
+1. Score seems to be dependent on the speed. This should not be so, because a page refresh will try to recover previous plot points at a faster speed, leading to less score for the subject.
+1. download data does not work. (It does work. What.)
+
+#####Non-critical Bugs
+1. dummy periods (periods that never existed - subjects earn 0 earnings/points - but show up in addition to the original 4 periods.) Now payoff doesn't show. I don't recall touching anything related to points. maybe I did.
+1. After refresh, there exists a seemingly underflow error in "Current score" especially for the group that "finished the period"
+1. relating to the endless period, reset button fails to work in some unknown conditions (for certain, it was not working at a moment when the period was supposed to end). UPDATE: seems that if there are subjects that finished, reset does not work.
+
+
+#####UI/UX - noncritical problems
+1. Flow-payoff plot is squeezed, not pushed. Ideally, older points should be erased. This seemed to happen when subject went overtime.
+
+###Solved problems
 1. some individuals does not get fade in modal. keeps going. 
 	- could be because browser does not run other tabs at the same time? 
 	- Could be because Period length was less than 5? 
@@ -43,24 +60,9 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 	- comparing the logs of the subject that did and the subject that didn't, the faulty subject ticks once more at the beginning.
 	- also counts down by 2 instead of 1????? This phenomenon starts sometimes at the beginning and sometimes in the middle.
 	- some subjects advance, witho
-	- when a subject "sends", does the partner in the group also recv the msg? or only for some?
-1. Silo does not work. or rather, randomization after each period does not work.
-	- There is no code that randomizes subjects according to the Silos
-1. Score seems to be dependent on the speed. This should not be so, because a page refresh will try to recover previous plot points at a faster speed, leading to less score for the subject.
-1. download data does not work. (It does work. What.)
-1. Flow-payoff plot update is one click off for subject-self. (Subject needs to click again to see the effect of the previous click). check out plotting function. 
-	- can be solved with predictable user behaviour (double clicks instead of single clicks)
-
-#####Non-critical Bugs
-1. dummy periods (periods that never existed - subjects earn 0 earnings/points - but show up in addition to the original 4 periods.)
-1. After refresh, there exists a seemingly underflow error in "Current score" especially for the group that "finished the period"
-1. relating to the endless period, reset button fails to work in some unknown conditions (for certain, it was not working at a moment when the period was supposed to end). UPDATE: seems that if there are subjects that finished, reset does not work.
-
-
-#####UI/UX - noncritical problems
-1. Flow-payoff plot is squeezed, not pushed. Ideally, older points should be erased.
-
-###Solved problems
+	- when a subject "sends", does the partner in the group also recv the msg? or only for some? 
+	- From logging all ticks and their sources, we can see that  => we saw differences that did not matter consequentially
+	- FIXED: the problem was that both `$scope.clock` and `tick()` were trying to keep time. What happened was that `tick()` of A (erroneous subject) was new_perioding B (partner) before B could new_period A. I removed the new_period ability of `tick()`. There is a Korean saying, `Too many captains sails the ship into the mountains.`
 1. in `rs.next_period = function(delay_secs) {}` and `rs.on("_next_period", function() {})`, Programmer confused `_enable_messaging` function with `_messaging_enabled` boolean 
 1. After period ends, the fade-in modal appears, but never goes into the next period. solved by calling next_period() function
 1. Period never ends. tick() was only called once, because duration was not set according to the config file. This was because send(__config__) calls are asynchronous. Clock was never started with the proper duration. Thus I manually set the configuration right before initializing the clock and it works.
