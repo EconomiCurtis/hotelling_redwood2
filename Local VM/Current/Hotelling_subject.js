@@ -1004,16 +1004,16 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
             time: time
         });
 
-        //check for end of period in continous time
-        if (time >= period_length) {
-            console.log("new_period --- from line 1014");
-            // if (id == keeper) {
-                rs.send("new_period", {
-                    current_period: current_period
-                });
-                console.log("I probably called new_period from line 1014");
-            // }
-        }
+        // //check for end of period in continous time
+        // if (time >= period_length) {
+        //     console.log("new_period --- from line 1014");
+        //     // if (id == keeper) {
+        //         rs.send("new_period", {
+        //             current_period: current_period
+        //         });
+        //         console.log("I probably called new_period from line 1014");
+        //     // }
+        // }
 
         if (game_type == "simultaneous") {
             sub_pay[0][curr_subperiods - 1] = network.players[0].payoff.toFixed(2);
