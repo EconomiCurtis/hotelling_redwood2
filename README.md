@@ -40,7 +40,9 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 	- can be solved with predictable user behaviour (double clicks instead of single clicks)
 	- observation: clicks are being logged, but not plotted.
 	- it is not a time synchronisity error; waiting does not solve the error. Only another click does.
-	- trying to find out / log the Pipeline: 
+	- trying to find out / log the Pipeline: click -> update loc pos target -> find intersection -> calculate payoff -> draw
+	- solved click by forcing location update without waiting for server
+	- if the partner changed location, it should affect my payoff, but it doesn't right now. solved problem by adding a message that shoots once all data updates are finished. The partner will run the updatePayoffPipeline (find intersection -> calculate payoff) when I do too.
 1. Score seems to be dependent on the speed. This should not be so, because a page refresh will try to recover previous plot points at a faster speed, leading to less score for the subject. 
 	- Plot2 function is being called every few `milliseconds` and in this function the total payoff is recalculated as += payoff * time difference since last plot2 call
 1. download data does not work. (It does work. What.)
