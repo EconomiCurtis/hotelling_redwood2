@@ -31,7 +31,6 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 
 ---
 
-##Oct 27, 2016
 ###Problems in Continuous Instant (CI) Treatment
 
 #####Functional errors
@@ -39,20 +38,27 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 	- There is no code that randomizes subjects according to the Silos
 1. Flow-payoff plot update is one click off for subject-self. (Subject needs to click again to see the effect of the previous click). check out plotting function. 
 	- can be solved with predictable user behaviour (double clicks instead of single clicks)
-1. Score seems to be dependent on the speed. This should not be so, because a page refresh will try to recover previous plot points at a faster speed, leading to less score for the subject.
+	- observation: clicks are being logged, but not plotted.
+	- it is not a time synchronisity error; waiting does not solve the error. Only another click does.
+	- trying to find out / log the Pipeline: 
+1. Score seems to be dependent on the speed. This should not be so, because a page refresh will try to recover previous plot points at a faster speed, leading to less score for the subject. 
+	- Plot2 function is being called every few `milliseconds` and in this function the total payoff is recalculated as += payoff * time difference since last plot2 call
 1. download data does not work. (It does work. What.)
 
 #####Non-critical Bugs
-1. dummy periods (periods that never existed - subjects earn 0 earnings/points - but show up in addition to the original 4 periods.) Now payoff doesn't show. I don't recall touching anything related to points. maybe I did.
 1. After refresh, there exists a seemingly underflow error in "Current score" especially for the group that "finished the period"
 1. relating to the endless period, reset button fails to work in some unknown conditions (for certain, it was not working at a moment when the period was supposed to end). UPDATE: seems that if there are subjects that finished, reset does not work.
 
 
 #####UI/UX - noncritical problems
 1. Flow-payoff plot is squeezed, not pushed. Ideally, older points should be erased. This seemed to happen when subject went overtime.
+	- no solution. seems to happen in overtime.
+	- this happens also when mode set to 'continuous'
+	- plot2 starts to update only after 20 seconds (this happens when p2_t += d)
 
 ###Solved problems
-1. some individuals does not get fade in modal. keeps going. 
+1. `Nov 6` dummy periods (periods that never existed - subjects earn 0 earnings/points - but show up in addition to the original 4 periods.) Existed due to double new_period call.
+1. `NOV 6` some individuals does not get fade in modal. keeps going. 
 	- could be because browser does not run other tabs at the same time? 
 	- Could be because Period length was less than 5? 
 	- When this happens, the onComplete() function inside the clock is not called. How can I make it tick? What is the problem?

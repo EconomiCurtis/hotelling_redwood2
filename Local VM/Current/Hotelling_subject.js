@@ -57,7 +57,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
     var in_group = [];       //who is in my redwood group
     var group_num = 0;
     var silo_num = 0;
-    var r_debug = 1;
+    var r_debug = 0;         //Chooses points automatically. Faulty (Nov.6, 2016)
 
     var total_flow = [];
     var total_flow2 = [];
@@ -358,12 +358,12 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                 find_intersect_pts();
 
                 //so we can get the correct payoffs
-                var index = get_index_by_id(id);
-                var pay = payoff(index);
-                rs.send("update_payoff", {
-                    pay: pay,
-                    index: index
-                });
+                // var index = get_index_by_id(id);
+                // var pay = payoff(index);
+                // rs.send("update_payoff", {
+                //     pay: pay,
+                //     index: index
+                // });
 
                 //let's find how long it was since we updated our payoffs      
                 date = new Date();
@@ -373,7 +373,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                 old_date = date;
 
                 p2_t += 0.12;
-                //p2_t += d;
+                // p2_t += d;
 
                 cummulative_payoff += network.players[get_index_by_id(id)].payoff * (d / (period_length * 1000));
 
@@ -455,8 +455,8 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                     //otherwise we plot nothing
                     return;
                 }
-
-            } else {
+            }
+            else {
                 //else we are in discrete time
                 p2_options.xaxis.tickDecimals = 0;
                 p2_options.xaxis.min = 0;
@@ -496,7 +496,6 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                             fill: filler[1]
                         }
                     }], p2_options);
-
                 } else if (flow_opts == "own") {
 
                     flow_payoff = plot_data(sub_pay[get_index_by_id(id)], 0, 1);
@@ -885,7 +884,6 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
      */
     function payoff(index) {
         var market_share = Math.abs(network.players[index].bound_hi - network.players[index].bound_lo) * scalar_x;
-
         return market_share * (network.players[index].price * scalar_y);
     }
 
@@ -1320,6 +1318,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                 if (allow_x) new_loc = pos.x.toFixed(3);
                 else if (allow_y) new_pos = pos.y.toFixed(3);
             } else {
+                console.log("The click position: (", pos.x, ",", pos.y, ")");
                 new_loc = pos.x.toFixed(3);
                 new_pos = pos.y.toFixed(3);
             }
@@ -1349,6 +1348,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                         id: id,
                         iterx: iterx
                     });
+                    network.players[get_index_by_id(id)].loc = Number(new_loc); //seems that sync is too slow. added after sending message to force change immediately.
                 }
                 if (y_rate === 0) {
                     rs.send("update_pos", {
@@ -1359,8 +1359,9 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                     rs.trigger("update_my_pos", {
                         new_pos: new_pos,
                         id: id,
-                        iterx: iterx
+                        itery: itery
                     });
+                    network.players[get_index_by_id(id)].price = Number(new_pos); //force change immediately. still send msg for record.
                 }
 
                 rs.send("update_target", {
