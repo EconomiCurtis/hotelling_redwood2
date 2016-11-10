@@ -540,6 +540,24 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         return res;
     }
 
+    function updatePayoffPipeline() {
+        sort_players();
+        find_intersect_pts();
+        var index = get_index_by_id(id);
+
+        //rs.send("update_bounds", { index:index, new_lo_bound:new_lo_bound, new_hi_bound:new_hi_bound } );
+
+        var pay = payoff(index);
+        rs.send("update_payoff", {
+            pay: pay,
+            index: index
+        });
+        rs.trigger("update_my_payoff", {
+            pay: pay,
+            index: index
+        });
+    }
+
     /*
      * payoff debug "V" generating function
      */
@@ -1313,7 +1331,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
 
 
         //plot 1 on click event handler
-        $("#placeholder").bind("plotclick", function(event, pos, item) {
+        $("#placeholder").bind("plotclick", function plotclick(event, pos, item) {
             if (game_type == "stage") {
                 if (allow_x) new_loc = pos.x.toFixed(3);
                 else if (allow_y) new_pos = pos.y.toFixed(3);
@@ -1375,21 +1393,8 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                     id: id,
                 });
 
-                sort_players();
-                find_intersect_pts();
-                var index = get_index_by_id(id);
-
-                //rs.send("update_bounds", { index:index, new_lo_bound:new_lo_bound, new_hi_bound:new_hi_bound } );
-
-                var pay = payoff(index);
-                rs.send("update_payoff", {
-                    pay: pay,
-                    index: index
-                });
-                rs.trigger("update_my_payoff", {
-                    pay: pay,
-                    index: index
-                });
+                rs.send("data_update_completed");
+                updatePayoffPipeline();
             }
 
             update_plot();
@@ -1397,7 +1402,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
 
 
         //plot 1 on hover event handler for drawing crosshairs
-        $("#placeholder").bind("plothover", function(event, pos, item) {
+        $("#placeholder").bind("plothover", function plothover(event, pos, item) {
             var a, b;
 
             if (game_type == "stage") {
@@ -1581,6 +1586,10 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
             network.players[get_index_by_id(msg.id)].target[1] = Number(msg.new_pos);
         }
 
+    });
+
+    rs.recv("data_update_completed", function(){
+        updatePayoffPipeline();
     });
 
     rs.recv("update_subsetting", function(uid, msg) {
