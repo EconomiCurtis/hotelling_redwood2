@@ -36,13 +36,6 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 #####Functional errors
 1. Silo does not work. or rather, randomization after each period does not work.
 	- There is no code that randomizes subjects according to the Silos
-1. Flow-payoff plot update is one click off for subject-self. (Subject needs to click again to see the effect of the previous click). check out plotting function. 
-	- can be solved with predictable user behaviour (double clicks instead of single clicks)
-	- observation: clicks are being logged, but not plotted.
-	- it is not a time synchronisity error; waiting does not solve the error. Only another click does.
-	- trying to find out / log the Pipeline: click -> update loc pos target -> find intersection -> calculate payoff -> draw
-	- solved click by forcing location update without waiting for server
-	- if the partner changed location, it should affect my payoff, but it doesn't right now. solved problem by adding a message that shoots once all data updates are finished. The partner will run the updatePayoffPipeline (find intersection -> calculate payoff) when I do too.
 1. Score seems to be dependent on the speed. This should not be so, because a page refresh will try to recover previous plot points at a faster speed, leading to less score for the subject. 
 	- Plot2 function is being called every few `milliseconds` and in this function the total payoff is recalculated as += payoff * time difference since last plot2 call
 1. download data does not work. (It does work. What.)
@@ -59,6 +52,28 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 	- plot2 starts to update only after 20 seconds (this happens when p2_t += d)
 
 ###Solved problems
+1. `Nov 10` Payoff summary was not displayed because of a bug fix that I applied to RedwoodSubject.js. In `rs.next_period` and `rs.on("_next_period")`, there was a typo and a functional bug that I fixed before (line 1 is the original, changed to line 2). But this resulted in not logging the data and thus the summary page not displaying the data. I commented out both lines and it still works fine. The intention of this line is unclear.
+
+	```js
+	/**
+	 * _enable_messaging is a function not a boolean. 
+	 * Replacing it with seemingly proper variable _messaging_enabled removed one bug.
+	 * The replacement introduced another bug: cummulative payoff was not logged properly.
+	 * I commented out both.
+	 * The new bug as well as the old bug are nowhere to be found.
+	 * The intention of the original line is unclear.
+	 */
+	//rs._enable_messaging = false; //this is a function not a boolean
+	rs._messaging_enabled = false; //but substituting the above line with this line doesn't do anything either, except that payoff is not logged
+	```
+
+1. `Nov 10` Flow-payoff plot update is one click off for subject-self. (Subject needs to click again to see the effect of the previous click). check out plotting function. 
+	- can be solved with predictable user behaviour (double clicks instead of single clicks)
+	- observation: clicks are being logged, but not plotted.
+	- it is not a time synchronisity error; waiting does not solve the error. Only another click does.
+	- trying to find out / log the Pipeline: click -> update loc pos target -> find intersection -> calculate payoff -> draw
+	- solved click by forcing location update without waiting for server
+	- if the partner changed location, it should affect my payoff, but it doesn't right now. solved problem by adding a message that shoots once all data updates are finished. The partner will run the updatePayoffPipeline (find intersection -> calculate payoff) when I do too.
 1. `Nov 6` dummy periods (periods that never existed - subjects earn 0 earnings/points - but show up in addition to the original 4 periods.) Existed due to double new_period call.
 1. `NOV 6` some individuals does not get fade in modal. keeps going. 
 	- could be because browser does not run other tabs at the same time? 

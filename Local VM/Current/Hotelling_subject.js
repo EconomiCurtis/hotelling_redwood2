@@ -1020,7 +1020,9 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
             time: time
         });
 
-        // //check for end of period in continous time
+        //  deleted because this is a duplicate functionality with the stopwatch. It lead to a problem:
+        //  if my page finished earlier than my partner's, this code will force the partner's to end, but not mine.
+        //  //check for end of period in continous time
         // if (time >= period_length) {
         //     console.log("new_period --- from line 1014");
         //     // if (id == keeper) {
@@ -1469,10 +1471,10 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                 cummulative_payoff += Number(sub_pay[get_index_by_id(id)][i]);
         }
 
-        // if (paid_round) rs.set_points(cummulative_payoff, msg.current_period, id);
         // why are there so many parameters? .set_points only accepts one: points
         console.log("cummulative_payoff", cummulative_payoff);
-        if (paid_round) rs.set_points(cummulative_payoff);
+        // if (paid_round) rs.set_points(cummulative_payoff);
+        if (paid_round) rs.set_points(cummulative_payoff, msg.current_period, id);
         document.getElementById("curr_score").innerHTML = "Current score: " + cummulative_payoff.toFixed(3);
         
       
