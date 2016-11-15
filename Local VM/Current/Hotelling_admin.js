@@ -1,9 +1,8 @@
 Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($rootScope, $scope, ra) {
-
     var new_period = 2;
     var group_size = 2;
     var silo_size = 1;
-    var silos = [
+    var silos = [ //array of silos. must be coherent with groups
         [],
         [],
         [],
@@ -18,242 +17,250 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
         []
     ];
     var subjs = [];
+    var groups = []; //array of groups. must be coherent with silos
     $('#current_silo').html('<small>Current Silo Size: ' + silo_size + '</small>');
     $('#current_group').html('<small>Current Group Size: ' + group_size + '</small>');
 
-    var Display = { //Display controller
+    var Display = {}; //display controller
+    Display.initialize = function() {
 
-        initialize: function() {
+        $("#start-session").click(function() {
+            $("#start-session").attr("disabled", "disabled");
+            ra.trigger("start_session");
+        });
 
-            $("#start-session").click(function() {
-                $("#start-session").attr("disabled", "disabled");
-                ra.trigger("start_session");
+        ra.on("start_session", function() {
+            $("#start-session").attr("disabled", "disabled");
+            $("#pause-session").removeAttr("disabled");
+        });
+
+        $("#refresh-subjects").click(function() {
+            $("#refresh-subjects").attr("disabled", "disabled");
+            ra.refreshSubjects().then(function() {
+                $("#refresh-subjects").removeAttr("disabled");
             });
+        });
 
-            ra.on("start_session", function() {
-                $("#start-session").attr("disabled", "disabled");
-                $("#pause-session").removeAttr("disabled");
-            });
+        $("#reset-session").click(function() {
+            ra.reset();
+        });
 
-            $("#refresh-subjects").click(function() {
-                $("#refresh-subjects").attr("disabled", "disabled");
-                ra.refreshSubjects().then(function() {
-                    $("#refresh-subjects").removeAttr("disabled");
-                });
-            });
+        $("#pause-session").click(function() {
+            $("#pause-session").attr("disabled", "disabled");
+            ra.trigger("pause");
+        });
+        ra.on("pause", function() {
+            $("#pause-session").attr("disabled", "disabled");
+        });
 
-            $("#reset-session").click(function() {
-                ra.reset();
-            });
+        $("#resume-session").click(function() {
+            $("#resume-session").attr("disabled", "disabled");
+            ra.trigger("resume");
+        });
+        ra.on("resume", function() {
+            $("#resume-session").attr("disabled", "disabled");
+            $("#pause-session").removeAttr("disabled");
+        });
 
-            $("#pause-session").click(function() {
-                $("#pause-session").attr("disabled", "disabled");
-                ra.trigger("pause");
-            });
-            ra.on("pause", function() {
-                $("#pause-session").attr("disabled", "disabled");
-            });
+        ra.on_subject_paused(function(userId) {
+            $("#pause-session").attr("disabled", "disabled");
+            $("tr.subject-" + userId).addClass("warning"); //Display current period for each user
+            $("tr.subject-" + userId + " :nth-child(4)").text("Paused"); //Display current period for each user
+        });
 
-            $("#resume-session").click(function() {
-                $("#resume-session").attr("disabled", "disabled");
-                ra.trigger("resume");
-            });
-            ra.on("resume", function() {
-                $("#resume-session").attr("disabled", "disabled");
-                $("#pause-session").removeAttr("disabled");
-            });
+        ra.on_all_paused(function() {
+            $("#resume-session").removeAttr("disabled");
+        });
 
-            ra.on_subject_paused(function(userId) {
-                $("#pause-session").attr("disabled", "disabled");
-                $("tr.subject-" + userId).addClass("warning"); //Display current period for each user
-                $("tr.subject-" + userId + " :nth-child(4)").text("Paused"); //Display current period for each user
-            });
+        ra.on_subject_resumed(function(user) {
+            $("tr.subject-" + user).removeClass("warning"); //Display current period for each user
+            $("tr.subject-" + user + " :nth-child(4)").text(""); //Display current period for each user
+        });
 
-            ra.on_all_paused(function() {
-                $("#resume-session").removeAttr("disabled");
-            });
+        $("#archive").click(function() {
+            var r = confirm("Are you sure you want to archive this session?");
+            if (r == true) {
+                ra.delete_session();
+            }
+        });
 
-            ra.on_subject_resumed(function(user) {
-                $("tr.subject-" + user).removeClass("warning"); //Display current period for each user
-                $("tr.subject-" + user + " :nth-child(4)").text(""); //Display current period for each user
-            });
+        ra.on_router_connected(function(connected) { //Display router connection status
+  				var status = $("#router-status");
+  				if (connected) {
+  					status.text("Router Connected");
+  					status.removeClass("alert-danger");
+  					status.addClass("alert-success");
+  				} else {
+  					status.text("Router Disconnected");
+  					status.removeClass("alert-success");
+  					status.addClass("alert-danger");
+  				}
+  			});
 
-            $("#archive").click(function() {
-                var r = confirm("Are you sure you want to archive this session?");
-                if (r == true) {
-                    ra.delete_session();
-                }
-            });
+        ra.on_set_period(function(user, period) {
+            $("tr.subject-" + user + " :nth-child(3)").text(period); //Display current period for each user
+        });
 
-            ra.on_router_connected(function(connected) { //Display router connection status
-      				var status = $("#router-status");
-      				if (connected) {
-      					status.text("Router Connected");
-      					status.removeClass("alert-danger");
-      					status.addClass("alert-success");
-      				} else {
-      					status.text("Router Disconnected");
-      					status.removeClass("alert-success");
-      					status.addClass("alert-danger");
-      				}
-      			});
+        ra.on_set_group(function(user, group) {
+            $("tr.subject-" + user + " :nth-child(2)").text(group); //Display group for each user
+        });
 
-            ra.on_set_period(function(user, period) {
-                $("tr.subject-" + user + " :nth-child(3)").text(period); //Display current period for each user
-            });
-
-            ra.on_set_group(function(user, group) {
-                $("tr.subject-" + user + " :nth-child(2)").text(group); //Display group for each user
-            });
-
-            ra.on_register(function(user) { //Add a row to the table to each user
-                $("#subject-list").empty();
-                for (var i = 0, l = ra.subjects.length; i < l; i++) {
-                    $("#subject-list").append($("<tr>").addClass("subject-" + ra.subjects[i].user_id).append(
-                        $("<td>").text(ra.subjects[i].user_id).after(
+        ra.on_register(function(user) { //Add a row to the table to each user
+            $("#subject-list").empty();
+            for (var i = 0, l = ra.subjects.length; i < l; i++) {
+                $("#subject-list").append($("<tr>").addClass("subject-" + ra.subjects[i].user_id).append(
+                    $("<td>").text(ra.subjects[i].user_id).after(
+                        $("<td>").text(0).after(
                             $("<td>").text(0).after(
-                                $("<td>").text(0).after(
-                                    $("<td>").text(""))))));
-                }
-            });
+                                $("<td>").text(""))))));
+            }
+        });
 
 
 
-            $("#set_period").click(function() {
-                if (new_period !== 0 && new_period !== undefined && new_period !== null && ra.subjects.length > 0) {
-                    //do_lottery();
-                    for (var i = 0, l = ra.subjects.length; i < l; i++) {
-                        ra.set_period(new_period, ra.subjects[i].user_id);
-                    }
-                    ++new_period;
-                }
-                $("#set_period").html("Start Period: " + new_period);
-            });
-
-            $("#set_group_size").click(function() {
-                group_size = Number(document.getElementById('group_size').value);
-
-                if (group_size > 0 && group_size !== undefined && group_size !== null && !isNaN(group_size)) {
-                    ra.trigger("do_lottery");
-                }
-                $('#current_group').html('<small>Current Group Size: ' + group_size + '</small>');
-
-            });
-
-            ra.on("do_lottery", function() {
-                setGroups = true;
-                var i = 0;
-                var tmp = [];
-
+        $("#set_period").click(function() {
+            if (new_period !== 0 && new_period !== undefined && new_period !== null && ra.subjects.length > 0) {
                 for (var i = 0, l = ra.subjects.length; i < l; i++) {
-                    var subj = {};
-                    subj.userid = ra.subjects[i].user_id;
-                    subj.a = 0;
-                    tmp.push(subj);
+                    ra.set_period(new_period, ra.subjects[i].user_id);
                 }
+                ++new_period;
+            }
+            $("#set_period").html("Start Period: " + new_period);
+        });
 
+        $("#set_group_size").click(function() {
+            tmp = Number(document.getElementById('group_size').value);
 
-                var curr_group = 1;
-                var count = 0;
-                while (count != tmp.length) {
-                    var rand = Math.floor(Math.random() * (tmp.length));
-                    if (tmp[rand].a === 0) {
-                        tmp[rand].a = 1;
+            if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && (silo_size % tmp == 0)) {
+                group_size = tmp;
+                ra.trigger("set_group");
+            }
+            else {
+                alert('Please make sure silo size is a multiple of group size');
+            }
+            $('#current_group').html('<small>Current Group Size: ' + group_size + '</small>');
 
-                        ra.set_group(curr_group, tmp[rand].userid);
-                        count++;
-                        if ((count % group_size === 0) && count !== 0) curr_group++;
-                    }
+        });
+
+        //assigns subjects to new groups within their silo
+        ra.on("set_group", function() {
+            setGroups = true;
+            var silosCopy = clone(silos); //we don't want to alter original data of silos
+            var groups = [];
+            //dedim(silosCopy) flattens the array into 1D array, in effect returning an array of subjects
+            console.log("silosCopy", silosCopy);
+            console.log("dedim(silosCopy)", dedim(silosCopy));
+            console.log("group_size", group_size);
+            var numberOfGroups = Math.ceil(dedim(silosCopy).length / group_size); 
+            console.log("numberOfGroups", numberOfGroups);
+            for (var i = 0; i < numberOfGroups; i++) {
+                groups.push([]);
+            }
+            console.log(groups, "groups");
+            console.log();
+
+            //go through array of silos and groups simultaneously (tracked by curr_silo, curr_group)
+            //take a random subject from each silo and put it into the group.
+            for (var curr_silo = 0, curr_group = 0, l = silosCopy.length; curr_silo < l; curr_silo++) {
+                var silo = silosCopy[curr_silo];
+                console.log(groups, "groups");
+                var group = groups[curr_group];
+                while (silo.length !== 0) {
+                    console.log("curr_silo, curr_group ", curr_silo, curr_group);
+                    if (group.length >= group_size) group = groups[++curr_group]; //if group is full, go onto next group
+                    var rand = Math.floor(Math.random() * (silo.length)); 
+                    var randomSubject = silo.splice(rand, 1)[0]; //selects one random subject from currrent silo
+                    ra.set_group(curr_group + 1, randomSubject.user_id); //tell server to set subject's group number
+                    group.push(randomSubject); //push to group. increments group.length
                 }
-            });
+            }
+        });
 
 
 
-            $("#set_silo_size").click(function() {
-                tmp = Number(document.getElementById('silo_size').value);
-                if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && tmp <= ra.subjects.length) {
-                    silo_size = Number(document.getElementById('silo_size').value);
-                    ra.trigger("set_silo");
-                } else {
-                    alert('Please make sure the silo size is less than or equal to the number of subjects');
+        $("#set_silo_size").click(function() {
+            tmp = Number(document.getElementById('silo_size').value);
+            if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && tmp <= ra.subjects.length) {
+                silo_size = tmp;
+                ra.trigger("set_silo");
+            } else {
+                alert('Please make sure the silo size is less than or equal to the number of subjects');
+            }
+            $('#current_silo').html('<small>Current Silo Size: ' + silo_size + '</small>');
+        });
+
+        ra.on("set_silo", function() {
+
+            tmp = Number(document.getElementById('silo_size').value);
+
+            if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && tmp <= ra.subjects.length) {
+                silo_size = tmp; //already set when pressed the button but let's do it again
+            }
+            subjs = [];
+            silos = [];
+
+            /**
+             * collect all subjects into subjs
+             * [Simon] Previous version of this code used for .. in loop.
+             * for .. in should be avoided in arrays because it also looks at prototype elements
+             */
+            for (var i = ra.subjects.length - 1; i >= 0; i--) {
+                var subj = {};
+                subj.user_id = ra.subjects[i].user_id;
+                subj.silo = -1;
+                subjs.push(subj);
+            }
+
+            /**
+             * number of subjects should be divisible by silo_size. If not, unpredictable behaviour may occur.
+             * create exact number of silos needed (numberOfSilos)
+             */
+            var numberOfSilos = Math.ceil(subjs.length / silo_size);
+            for (var i = 0; i < numberOfSilos; i++) {
+                silos.push([]);
+            }
+
+            /**
+             * go through each silo. while silo is not full and subject available
+             * radomly select a subject, remove it from subjs list and push into silo
+             * assumes that we have the correct number of silos
+             */
+            for (var i = silos.length - 1; i >= 0; i--) {
+                var silo = silos[i];
+                var siloIndex = i + 1;
+                while (silo.length !== silo_size && subjs.length !== 0) {
+                    var rand = Math.floor(Math.random() * subjs.length);
+                    var randomSubject = subjs.splice(rand, 1)[0]; //selects one random subject
+                    randomSubject.silo = siloIndex;
+                    silo.push(randomSubject);
                 }
-                $('#current_silo').html('<small>Current Silo Size: ' + silo_size + '</small>');
-            });
+            }
 
-            ra.on("set_silo", function() {
+            console.log('success setting silos. silo_size = ', silo_size);
+            console.log("silos ", silos);
+        });
 
-                tmp = Number(document.getElementById('silo_size').value);
-
-                if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && tmp <= ra.subjects.length) {
-                    silo_size = Number(document.getElementById('silo_size').value);
-                    subjs = [];
-                    silos = [
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        [],
-                        []
-                    ];
-
-                    for (var i in ra.subjects) {
-                        var subj = {};
-                        subj.id = ra.subjects[i];
-                        subj.a = 0;
-                        subj.silo = -1;
-                        subjs.push(subj);
-                    }
-
-                    var count = 0;
-                    var curr_silo = 0;
-
-                    while (count != subjs.length) {
-                        var rand = Math.floor(Math.random() * (subjs.length));
-                        if (subjs[rand].silo == -1) {
-                            subjs[rand].silo = curr_silo;
-
-                            count++;
-                            silos[curr_silo].push(subjs[rand]);
-
-                            if (silo_size == 1) curr_silo++;
-                            else if ((count % silo_size === 0) && count !== 0) curr_silo++;
-                        }
-                    }
-                    console.log('success setting silos. silo_size = ' + silo_size);
+        ra.on_set_config(function(config) { //Display the config file
+            $("table.config").empty();
+            var a = $.csv.toArrays(config);
+            for (var i = 0; i < a.length; i++) {
+                var row = a[i];
+                var tr = $("<tr>");
+                for (var j = 0; j < row.length; j++) {
+                    var cell = row[j];
+                    var td = $((i === 0 ? "<th>" : "<td>")).text(cell);
+                    tr.append(td);
                 }
-
-
-            });
-
-            ra.on_set_config(function(config) { //Display the config file
-                $("table.config").empty();
-                var a = $.csv.toArrays(config);
-                for (var i = 0; i < a.length; i++) {
-                    var row = a[i];
-                    var tr = $("<tr>");
-                    for (var j = 0; j < row.length; j++) {
-                        var cell = row[j];
-                        var td = $((i === 0 ? "<th>" : "<td>")).text(cell);
-                        tr.append(td);
-                    }
-                    $("table.config").append(tr);
-                }
-            });
-
-
-
-        }
+                $("table.config").append(tr);
+            }
+        });
     };
 
     var resetGroups = function() {
         var config = ra.get_config(1, 0) || {};
-        for (var i = 0; i < ra.subjects.length; i++) { //set all subjects to group 1 (this is so that matching can be changed per period)
+        //set all subjects to group 1 
+        //(this is so that matching can be changed per period)
+        for (var i = 0; i < ra.subjects.length; i++) { 
             if ($.isArray(config.groups)) {
                 for (var groupId = 0; groupId < config.groups.length; groupId++) {
                     if ($.isArray(config.groups[groupId])) {
@@ -294,7 +301,37 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
         ra.resume();
     });
 
+    /*
+     ********************
+     * Helper functions *
+     ********************
+     */
+    
+    // Dedimensionize a given array
+    function dedim(arr) {
+        var result = [];
+        _dedim(arr, result);
+        return result;
+    }
+    function _dedim(arr, result) {
+        if (dataTypeOf(arr) == 'array') {
+            var len = arr.length;
+            for (var i = 0; i < len; i++) {
+                _dedim(arr[i], result);
+            }
+        }
+        else {
+            result.push(arr);
+        }
+    }
+    // Function that outputs a more specific data type
+    function dataTypeOf(data) {
+        return Object.prototype.toString.call(data).slice(8,-1).toLowerCase();
+    }
 
-
+    // clones an object
+    function clone(obj){
+        return JSON.parse(JSON.stringify(obj));
+    }
 
 }]);
