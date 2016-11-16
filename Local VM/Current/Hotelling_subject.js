@@ -1024,12 +1024,12 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         //  if my page finished earlier than my partner's, this code will force the partner's to end, but not mine.
         //  //check for end of period in continous time
         // if (time >= period_length) {
-        //     console.log("new_period --- from line 1014");
+        //     console.log("period_finished_called_by_subject --- from line 1014");
         //     // if (id == keeper) {
-        //         rs.send("new_period", {
+        //         rs.send("period_finished_called_by_subject", {
         //             current_period: current_period
         //         });
-        //         console.log("I probably called new_period from line 1014");
+        //         console.log("I probably called period_finished_called_by_subject from line 1014");
         //     // }
         // }
 
@@ -1061,7 +1061,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                         curr_subperiods: curr_subperiods
                     });
 
-                    if (curr_subperiods == subperiods) rs.send("new_period", {
+                    if (curr_subperiods == subperiods) rs.send("period_finished_called_by_subject", {
                         current_period: current_period
                     });
                 }
@@ -1142,7 +1142,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                 if (curr_subperiods == subperiods) { //when we go through all subperiods, it's time for a new period
                     sub_pay[0][curr_subperiods - 1] = payoff(0).toFixed(3);
                     sub_pay[1][curr_subperiods - 1] = payoff(1).toFixed(3);
-                    if (id == keeper) rs.send("new_period", {
+                    if (id == keeper) rs.send("period_finished_called_by_subject", {
                         current_period: current_period
                     });
                 }
@@ -1292,10 +1292,9 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
             .frequency(1).onTick(tick)
             .duration(period_length)
             .onComplete(function() {
-                rs.send("new_period", {
+                rs.send("period_finished_called_by_subject", {
                     current_period: current_period
                 });
-                console.log("new period --- from clock");
             });
 
         $scope.clock.start();
@@ -1461,7 +1460,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         } else return;
     });
 
-    rs.recv("new_period", function(uid, msg) {
+    rs.recv("period_finished_called_by_subject", function(uid, msg) {
         waiting = 1;
 
         //count up sub payoffs for total period payoff for discrete types
@@ -1479,7 +1478,15 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         
       
         $("#myModal").modal('show');
-        rs.next_period();
+        // rs.next_period();
+        
+    });
+
+    rs.recv("new_period_called_by_admin", function(uid, msg) {
+        console.log("new_period_called_by_admin");
+        if (msg.current_period == current_period) {
+            rs.next_period();
+        }
     });
 
     rs.recv("update_player", function(uid, msg) {
