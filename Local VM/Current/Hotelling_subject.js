@@ -953,7 +953,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
     }
 
     function log_data() {
-            if (id == keeper) {
+            if (id == keeper && !waiting) {
                 var value = network.players;
                 rs.send("data_log", {
                     value: value,
@@ -1024,12 +1024,12 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         //  if my page finished earlier than my partner's, this code will force the partner's to end, but not mine.
         //  //check for end of period in continous time
         // if (time >= period_length) {
-        //     console.log("period_finished_called_by_subject --- from line 1014");
+        //     console.log("new_period --- from line 1014");
         //     // if (id == keeper) {
-        //         rs.send("period_finished_called_by_subject", {
+        //         rs.send("new_period", {
         //             current_period: current_period
         //         });
-        //         console.log("I probably called period_finished_called_by_subject from line 1014");
+        //         console.log("I probably new_period from line 1014");
         //     // }
         // }
 
@@ -1061,7 +1061,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                         curr_subperiods: curr_subperiods
                     });
 
-                    if (curr_subperiods == subperiods) rs.send("period_finished_called_by_subject", {
+                    if (curr_subperiods == subperiods) rs.send("new_period", {
                         current_period: current_period
                     });
                 }
@@ -1142,7 +1142,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
                 if (curr_subperiods == subperiods) { //when we go through all subperiods, it's time for a new period
                     sub_pay[0][curr_subperiods - 1] = payoff(0).toFixed(3);
                     sub_pay[1][curr_subperiods - 1] = payoff(1).toFixed(3);
-                    if (id == keeper) rs.send("period_finished_called_by_subject", {
+                    if (id == keeper) rs.send("new_period", {
                         current_period: current_period
                     });
                 }
@@ -1276,6 +1276,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
 
         id = rs.user_id;
         group_num = rs._group;
+        console.log("group_num", group_num);
 
         for (var i = 0, l = rs.subjects.length; i < l; i++) {
             in_group.push(parseInt(rs.subjects[i].user_id));
@@ -1292,7 +1293,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
             .frequency(1).onTick(tick)
             .duration(period_length)
             .onComplete(function() {
-                rs.send("period_finished_called_by_subject", {
+                rs.send("new_period", {
                     current_period: current_period
                 });
             });
@@ -1460,7 +1461,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         } else return;
     });
 
-    rs.recv("period_finished_called_by_subject", function(uid, msg) {
+    rs.recv("new_period", function(uid, msg) {
         waiting = 1;
 
         //count up sub payoffs for total period payoff for discrete types
@@ -1478,16 +1479,19 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         
       
         $("#myModal").modal('show');
-        // rs.next_period();
+        // rs.send("new_period_request", {current_period : current_period}); //sends request to admin to move on to next period
+        rs.next_period();
         
     });
 
+    // if admin permitted new_period -- admin checks if everyone is finished with period -- move on to next_period
     rs.recv("new_period_called_by_admin", function(uid, msg) {
         console.log("new_period_called_by_admin");
-        if (msg.current_period == current_period) {
+        if (uid == "admin" && msg.current_period == current_period) {
             rs.next_period();
         }
     });
+
 
     rs.recv("update_player", function(uid, msg) {
         if (msg.id !== null) {

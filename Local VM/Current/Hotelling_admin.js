@@ -138,7 +138,7 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
 
             if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && (silo_size % tmp == 0)) {
                 group_size = tmp;
-                ra.trigger("set_group");
+                ra.trigger("assign_group");
             }
             else {
                 alert('Please make sure silo size is a multiple of group size');
@@ -147,22 +147,22 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
         });
 
         //assigns subjects to new groups within their silo
-        ra.on("set_group", function() {
+        ra.on("assign_group", function(msg) {
+            console.log("msg", msg);
             setGroups = true;
             subject_count = 0; //we'll count subjects again
             var silosCopy = clone(silos); //we don't want to alter original data of silos
             var groups = [];
             //dedim(silosCopy) flattens the array into 1D array, in effect returning an array of subjects
-            // console.log("silosCopy", silosCopy);
-            // console.log("dedim(silosCopy)", dedim(silosCopy));
-            // console.log("group_size", group_size);
+            console.log("silosCopy", silosCopy);
+            console.log("dedim(silosCopy)", dedim(silosCopy));
+            console.log("group_size", group_size);
             var numberOfGroups = Math.ceil(dedim(silosCopy).length / group_size); 
-            // console.log("numberOfGroups", numberOfGroups);
+            console.log("numberOfGroups", numberOfGroups);
             for (var i = 0; i < numberOfGroups; i++) {
                 groups.push([]);
             }
-            // console.log(groups, "groups");
-            // console.log();
+            console.log(groups, "groups");
 
             //go through array of silos and groups simultaneously (tracked by curr_silo, curr_group)
             //take a random subject from each silo and put it into the group.
@@ -175,7 +175,8 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
                     if (group.length >= group_size) group = groups[++curr_group]; //if group is full, go onto next group
                     var rand = Math.floor(Math.random() * (silo.length)); 
                     var randomSubject = silo.splice(rand, 1)[0];                  //selects one random subject from currrent silo
-                    ra.set_group(curr_group + 1, randomSubject.user_id);          //tell server to set subject's group number
+                    console.log("!msg.current_period", !msg || !msg.current_period);
+                    ra.set_group(curr_group + 1, randomSubject.user_id);          //tell server to set subject's group number. if it's before game starts, do the normal protocol. else, only change group number
                     group.push(randomSubject);                                    //push to group. increments group.length
                     subject_count++;
                 }
@@ -183,7 +184,10 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
         });
 
 
+        function custom_set_group(group_id, user_id) {
+            ra.sendCustom("custom_set_group", { user_id : user_id , group_id : group_id });
 
+        }
 
 
 
@@ -191,13 +195,13 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
             tmp = Number(document.getElementById('silo_size').value);
             if (tmp > 0 && tmp !== undefined && tmp !== null && !isNaN(tmp) && tmp <= ra.subjects.length) {
                 silo_size = tmp;
-                ra.trigger("set_silo");
+                ra.trigger("assign_silo");
             } else {
                 alert('Please make sure the silo size is less than or equal to the number of subjects');
             }
             $('#current_silo').html('<small>Current Silo Size: ' + silo_size + '</small>');
         });
-        ra.on("set_silo", function() {
+        ra.on("assign_silo", function() {
 
             tmp = Number(document.getElementById('silo_size').value);
 
@@ -312,9 +316,9 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
         ra.resume();
     });
 
-    ra.recv("period_finished_called_by_subject", function(uid, msg) {
+    ra.recv("new_period_request", function(uid, msg) {
         /*
-        counts the number of messages called and if every subject sent this message, trigger set_group
+        counts the number of messages called and if every subject sent this message, trigger assign_group
          */
             var current_period = msg.current_period;
             console.log("current_period ", current_period);
@@ -327,7 +331,7 @@ Redwood.controller("AdminCtrl", ["$rootScope", "$scope", "Admin", function($root
                 console.log(per_period_subject_counter[current_period]);
                 if ( --per_period_subject_counter[current_period] == 0 ) { //if we counted down all subjects
                     console.log("last subject has arrived");
-                    ra.trigger("set_group");
+                    ra.trigger("assign_group", {current_period : current_period});
                     ra.sendCustom("new_period_called_by_admin", {current_period : current_period});
                 }
             }

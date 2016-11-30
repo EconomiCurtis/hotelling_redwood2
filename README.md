@@ -55,6 +55,7 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 	- plot2 starts to update only after 20 seconds (this happens when p2_t += d)
 
 ###Solved problems
+1. `Nov 16` all subjects progress to next period simultaneously. groups are reset within silos.
 1. `Nov 15` set_silo and set_group on admin page load is fixed.
 1. `Nov 10` Payoff summary was not displayed because of a bug fix that I applied to RedwoodSubject.js. In `rs.next_period` and `rs.on("_next_period")`, there was a typo and a functional bug that I fixed before (line 1 is the original, changed to line 2). But this resulted in not logging the data and thus the summary page not displaying the data. I commented out both lines and it still works fine. The intention of this line is unclear.
 
