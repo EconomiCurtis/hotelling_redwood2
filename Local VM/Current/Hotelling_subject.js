@@ -1,4 +1,13 @@
 Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'SynchronizedStopWatch', "RedwoodCore", function($rootScope, $scope, rs, SynchronizedStopWatch, r) {
+
+    // Trying to debug: when does rs.subjects get updated?
+    setInterval(function(){
+        console.log("rs.subjects", rs.subjects);
+        rs.subjects.forEach(function(el) {
+            console.log("accum points for user" + el.user_id, el.data["_accumulated_points"]);
+        });
+    }, 120);
+
     var id = 0;              //player id
     var current_period = 0;
     var curr_subperiods = 1;
@@ -1479,8 +1488,8 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         
       
         $("#myModal").modal('show');
-        // rs.send("new_period_request", {current_period : current_period}); //sends request to admin to move on to next period
-        rs.next_period();
+        rs.send("new_period_request", {current_period : current_period}); //sends request to admin to move on to next period
+        // rs.next_period();
         
     });
 
