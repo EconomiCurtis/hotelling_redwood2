@@ -1,13 +1,4 @@
 Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'SynchronizedStopWatch', "RedwoodCore", function($rootScope, $scope, rs, SynchronizedStopWatch, r) {
-
-    // Trying to debug: when does rs.subjects get updated?
-    setInterval(function(){
-        console.log("rs.subjects", rs.subjects);
-        rs.subjects.forEach(function(el) {
-            console.log("accum points for user" + el.user_id, el.data["_accumulated_points"]);
-        });
-    }, 120);
-
     var id = 0;              //player id
     var current_period = 0;
     var curr_subperiods = 1;
@@ -40,7 +31,7 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
     var flow_payoff = [];    //should be a better way of storing flow payoffs for scalability reasons..
     var flow_payoff2 = [];
     var game_type = "continuous";
-    var debug = false;       //player 'Vs'
+    var debug1 = false;       //player 'Vs'
     var debug2 = false;      //intersect lines
     var debug3 = false;      //market share box shading
     var col;                 //player's blue color. may be unnecessary to store this info now
@@ -974,7 +965,6 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
 
     //time keeping 1s interval function
     function tick() {
-        // console.log("ticking");
         if (waiting) return;
 
         if (time <= 1) {
@@ -1489,13 +1479,13 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
       
         $("#myModal").modal('show');
         rs.send("new_period_request", {current_period : current_period}); //sends request to admin to move on to next period
+        rs.new_period_requested = true;
         // rs.next_period();
         
     });
 
     // if admin permitted new_period -- admin checks if everyone is finished with period -- move on to next_period
     rs.recv("new_period_called_by_admin", function(uid, msg) {
-        console.log("new_period_called_by_admin");
         if (uid == "admin" && msg.current_period == current_period) {
             rs.next_period();
         }
