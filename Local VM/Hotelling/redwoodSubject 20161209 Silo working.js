@@ -1,3 +1,10 @@
+/**
+ * !!!!CAUTION!!!! Be careful not to use this file with past experiments
+ * This file has been further modified by Simon Seo (simon.seo@nyu.edu, 09 Dec 2016) to implement siloing
+ * from commit a3b79f866ed7d897685fbeb72eee6d2f68ade125 (20 Apr 2015)
+ * of Leeps-Lab/RedwoodFramework (https://github.com/Leeps-Lab/RedwoodFramework)
+ */
+
 
 Redwood.factory("RedwoodSubject", ["$q", "$rootScope", "$timeout", "RedwoodCore", function($q, $rootScope, $timeout, rw) {
 
