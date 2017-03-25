@@ -23,7 +23,7 @@ GET http://192.168.33.10/static/admin/img/icon_addlink.gif 404 (Not Found) (inde
 
 ---
 
-##Sept 27, 2016
+## Sept 27, 2016
 An experiment consists of a CSV and a JSON.
 The CSV stores variables that differs for every session.
 If you run into a "Could not connect to router" it could be because you haven't started the redwood-router.
@@ -31,9 +31,9 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 
 ---
 
-###Problems in Continuous Instant (CI) Treatment
+### Problems in Continuous Instant (CI) Treatment
 
-#####Functional errors
+##### Functional errors
 1. Silo does not work. or rather, randomization after each period does not work.
 	- There is no code that randomizes subjects according to the Silos
 	- barrier to wait for everyone -> admin keeps track of who's finished the period and reassigns groups
@@ -41,20 +41,20 @@ Start it by `sudo start redwood-router` or disable the firewall (maybe of the lo
 	- Plot2 function is being called every few `milliseconds` and in this function the total payoff is recalculated as += payoff * time difference since last plot2 call
 1. download 	data does not work. (It does work. What.)
 
-#####Non-critical Bugs
+##### Non-critical Bugs
 1. After refresh, there exists a seemingly underflow error in "Current score" especially for the group that "finished the period"
 	- chrome kiosk mode prevent refresh
 	- if a barrier, stop accumulating points
 1. relating to the endless period, reset button fails to work in some unknown conditions (for certain, it was not working at a moment when the period was supposed to end). UPDATE: seems that if there are subjects that finished, reset does not work.
 
 
-#####UI/UX - noncritical problems
+##### UI/UX - noncritical problems
 1. Flow-payoff plot is squeezed, not pushed. Ideally, older points should be erased. This seemed to happen when subject went overtime.
 	- no solution. seems to happen in overtime.
 	- this happens also when mode set to 'continuous'
 	- plot2 starts to update only after 20 seconds (this happens when p2_t += d)
 
-###Solved problems
+### Solved problems
 1. `Nov 16` all subjects progress to next period simultaneously. groups are reset within silos.
 1. `Nov 15` set_silo and set_group on admin page load is fixed.
 1. `Nov 10` Payoff summary was not displayed because of a bug fix that I applied to RedwoodSubject.js. In `rs.next_period` and `rs.on("_next_period")`, there was a typo and a functional bug that I fixed before (line 1 is the original, changed to line 2). But this resulted in not logging the data and thus the summary page not displaying the data. I commented out both lines and it still works fine. The intention of this line is unclear.
