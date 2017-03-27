@@ -1682,11 +1682,11 @@ Redwood.controller("SubjectCtrl", ["$rootScope", "$scope", "RedwoodSubject", 'Sy
         for (var i = 0; i < id.length - 15; ++i) {
             tmp_id += id[i];
         }
-        document.getElementById("subj").innerHTML = "Subject: " + tmp_id;
+        // document.getElementById("subj").innerHTML = "Subject: " + tmp_id;
 
         //remove progress bar for continuous game types
-        //if(game_type == "continuous") document.getElementById("prog").style.visibility="hidden";
-        //if(rs.config.show_secs_left === 0) document.getElementById("time").style.visibility="hidden";
+        if(game_type == "continuous") document.getElementById("progress").style.visibility="hidden";
+        if(rs.config.show_secs_left === 0) document.getElementById("time").style.visibility="hidden";
 
         if (paid_round) document.getElementById("paid").innerHTML = "Scoring Period";
         else document.getElementById("paid").innerHTML = "Unpaid Practice Period";
